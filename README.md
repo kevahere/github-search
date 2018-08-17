@@ -6,7 +6,7 @@ Used Atom as main text editor.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.0-beta.1.
 
-
+The project is available at kevahere.github.io/github-search
 
 ## Development server
 
