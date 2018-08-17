@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: "api.github.com/users/kevahere?access_token=' + 1df8525e7c99320632f2c477a96abd17a2fe1a02"
+  baseUrl: "api.github.com/users/kevahere?access_token=5958638cfdabfbc18f5cf9e2ad3d54252b367f67",
+  accessToken:"5958638cfdabfbc18f5cf9e2ad3d54252b367f67",
 };
 
 /*

@@ -1,6 +1,7 @@
 # GithubSearch
 Projected built by Kevin Ahere beginning 17/8/2018.
 Simple Angular app that allows the user to view and search Github repos using the Github API.
+###GithubAPIv3
 
 Used Atom as main text editor.
 
