@@ -1,4 +1,6 @@
 export class User {
-  private username:string;
+  login:string;
+  avatar_url:string;
+  url:string
 
 }
