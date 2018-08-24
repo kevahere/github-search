@@ -1,6 +1,9 @@
 export class User {
-  login:string;
-  avatar_url:string;
-  url:string
+constructor(
+  public login:string,
+   public avatar_url:string,
+   public url:string
+){
+}
 
 }

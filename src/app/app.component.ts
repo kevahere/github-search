@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { GitinformationService } from './gitinformation.service';
 import { HttpClient } from '@angular/common/http'
 import { UserprofileComponent } from './userprofile/userprofile.component'
+import { User } from './user';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,21 +11,11 @@ import { UserprofileComponent } from './userprofile/userprofile.component'
 })
 export class AppComponent {
   title = 'github-search';
-  user$
-  avatar:string
+  avatar: string
+  user:User;
+    constructor(public gitinformationService:GitinformationService){}
 
-  ngOnInit(){
-    this.http.get('https://api.github.com/users/kevahere?access_token=5958638cfdabfbc18f5cf9e2ad3d54252b367f67').subscribe(
-      data=>{
-        // console.log(data)
-        this.user$ = data;
-        console.log(this.user$.avatar_url)
-        this.avatar = this.user$.avatar_url;
-      }
-    )
-  }
 
-  constructor(private git:GitinformationService, private http:HttpClient){
+  ngOnInit() { }
 
-  }
 }

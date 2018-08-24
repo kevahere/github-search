@@ -1,0 +1,7 @@
+#searchBox {
+   box-sizing: border-box;
+   border: 10px solid  rgb(214, 208, 201);
+   width: 700px;
+   margin-top: 1000px;
+   margin-left: 100px;
+}

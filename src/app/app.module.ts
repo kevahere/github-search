@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { GitinformationService } from './gitinformation.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UserprofileComponent } from './userprofile/userprofile.component'
+
 @NgModule({
   declarations: [
     AppComponent,

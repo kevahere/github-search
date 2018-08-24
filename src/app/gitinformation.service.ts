@@ -10,39 +10,46 @@ import { Repository } from './repository'
 
 
 export class GitinformationService {
-  key:string = environment.accessToken
-  user:User
-  apiUrl:string = environment.apiUrl
+  key: string = environment.accessToken
+  user: User
+  apiUrl: string = environment.apiUrl
 
   repo$
 
 
   constructor(private http: HttpClient) {
-    this.user= new User
+    this.user = new User(
+      "login", "avatar_url", "url"
+    )
   }
 
 
-  getUserInfo() {
-    interface ApiResponse{
-      login:string;
-      avatar_url:string;
-      url:string;
+  getUserInfo(user) {
+    interface ApiResponse {
+      login: string;
+      avatar_url: any;
+      url: string;
     }
 
 
     let promise = new Promise(
-      (resolve,reject)=>{
-      this.http.get<ApiResponse>(this.apiUrl+this.user+this.key).toPromise().then(response=>{
-        this.user = new User
-        resolve()
-      },
-      error=>{
-        this.user.login="Woops something went wrong"
-        this.user.avatar_url="something went wrong"
-        this.user.url="Page not found"
-      }
-    )
-    })
+      (resolve, reject) => {
+        this.http.get<ApiResponse>("https://api.github.com/users/kevahere?access_token=5958638cfdabfbc18f5cf9e2ad3d54252b367f67").toPromise().then(response => {
+          this.user.login = response.login;
+          this.user.avatar_url = response.avatar_url;
+          this.user.url = response.url;
+          console.log('dum')
+          console.log(response);
+          resolve();
+
+        },
+          error => {
+            this.user.login = "Woops something went wrong"
+            this.user.avatar_url = "something went wrong"
+            this.user.url = "Page not found"
+          }
+        )
+      })
     return promise
   }
 
