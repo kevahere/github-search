@@ -13,7 +13,6 @@ export class GitinformationService {
   key: string = environment.accessToken
   user: User
   apiUrl: string = environment.apiUrl
-
   repo$
 
 

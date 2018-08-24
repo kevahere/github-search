@@ -11,10 +11,15 @@ import { User } from '../user';
 export class UserprofileComponent implements OnInit {
 
 user:User;
-  constructor(public gitinformationService:GitinformationService){}
+  constructor(public gitService:GitinformationService){
+
+
+  }
 
 
   ngOnInit() {
+    this.gitService.getUserInfo(this.user)
+    this.user = this.gitService.getUserInfo(this.user)
 
   }
 
