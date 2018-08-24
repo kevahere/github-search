@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { AboutComponent } from './about/about.component'
 import { RouterModule, Routes } from '@angular/router'
-
+import {RoutingModule} from './routing/routing.module'
 const routes: Routes = [
   { path: "user", component: UserprofileComponent },
   { path: "about", component: AboutComponent }
