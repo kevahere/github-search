@@ -5,3 +5,15 @@
    margin-top: 1000px;
    margin-left: 100px;
 }
+
+.header{
+  text-align: center;
+  background-color: black;
+
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
