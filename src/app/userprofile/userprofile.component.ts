@@ -11,6 +11,7 @@ import { User } from '../user';
 export class UserprofileComponent implements OnInit {
 
 user:User;
+response:any;
   constructor(public gitService:GitinformationService){
 
 
@@ -18,8 +19,9 @@ user:User;
 
 
   ngOnInit() {
-    this.gitService.getUserInfo(this.user)
-    this.user = this.gitService.getUserInfo(this.user)
+    this.gitService.getUserInfo()
+    this.response = this.gitService.getUserInfo()
+    console.log(this.response)
 
   }
 
